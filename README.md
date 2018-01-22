@@ -24,59 +24,38 @@ npm install @mediaxpost/aescrypt-helper
 <a name="usage"></a>
 
 ```js
-const validationHelper = require('@mediaxpost/aescrypt-helper');
+const AESCryptHelper = require('@mediaxpost/aescrypt-helper');
 
-console.log(validationHelper.validate('1.23', 'float'));
-console.log(validationHelper.validate('qwerty', 'float'));
-console.log(validationHelper.validate('qwerty', 'string'));
-console.log(validationHelper.convert('1.23', 'float'));
-console.log(validationHelper.strToBool('yes'));
-console.log(validationHelper.strToBool('True'));
+const secret = '41e8c08ff31f97547ac11cc47c29f8ce5cb187a70ef09226c0f025c25c55b5b3';
+const iv = '3816d1474cf82f3182b83c390d3e8eb5';
+const creds = { secret: null, iv: null };
+
+creds.secret = Buffer.from(secret, 'hex');
+creds.iv = Buffer.from(iv, 'hex');
+const aescyptHelper = new AESCryptHelper(creds.secret, creds.iv);
+
+console.log(aescryptHelper.decrypt(aescryptHelper.encrypt('Test Message')));
 ```
 
 # [API Reference](#api)
 <a name="api"></a>
 
-## validationHelper.validate(value, type [, options]) ⇒ boolean
-Test is the string `value` is of the `type` specified. Additional [Validator.js](https://www.npmjs.com/package/validator) `options` may be passed for added constraints.
+## AESCryptHelper constructor(secret, iv[, separator]) ⇒ instanceof AESCryptHelper
+Create an instance of AESCryptHelper using the `secret`, and `iv` (initialization vector).  Optionally, a block `separator` can be provided to determine how blocks of data are separated. For many implementations this is a new-line character, this library defaults to '$$$$'. The `secret`, `iv`, and the `separator` can be a string or a Buffer.
 
-| Type | Desc | Options |
-| ---- | ---- | ------- |
-| `'int'`, `'integer'` |  Integer Values | Y |
-| `'float'` | Floating Point Values | Y |
-| `'bool'`, `'boolean'` | Boolean values | N |
-| `'email'`, | Email addresses | Y |
-| `'currency'` | Currency values (*e.g. '1.23', '$30', '€12,73'*) | Y |
-| `'uuid'` | v1, v2, or v4 UUID values | N |
-| `'url'` | Url values (*e.g. 'http://google.com'* ) | Y |
-| `'fqdn'` | Fully-qualified Domain Name (*e.g. 'docs.google.com'*) | Y |
-| `'apikey'` | A [`uuid-apikey`](https://www.npmjs.com/package/uuid-apikey) APIKey value  (e.g. 'ZYXWVTS-9876543-ABCDEFG-1234567') | N |
-| `'string'` | String Values | N |
-| `'any'` | Any possible value | N |
+***Note***: The `iv` should be no more than 16-bytes in length and the `secret` should be no more than 32-bytes in length. When including a separator, it is recommended that non-base-64 characters are used.
 
-```js
-validationHelper.validate('1.23', 'float');
-```
+## AESCryptHelper.encrypt(data [, secret]) ⇒ Buffer
+Encrypt the `data` Buffer with the configured `secret` or the optionally passed `secret`. No `iv` is used for the encryption.  Returns the encrypted data in a Buffer.
 
-**Output**:
-```
-true
-```
+## AESCryptHelper.encryptiv(data [, secret] [, iv]) ⇒ Buffer
+Encrypt the `data` Buffer with the configured `secret` or the optionally passed `secret` and the configured `iv` or the optionally passed `iv`. Returns the encrypted data in a Buffer.
 
-## validationHelper.convert(value, type) ⇒ mixed
-Attempts to convert the provided string `value` to the `type` specified. If the `type` is unknown, then the original `value` is returned.  The `type` can be `int`, `float`, or `bool`. For `int` and `float` values `NaN` is returned if the value can not be converted.
+## AESCryptHelper.decrypt(encryptedData [, secret]) ⇒ Buffer
+Decrypts the `encryptedData` Buffer with the configured `secret` or the optionally passed `secret`. No `iv` is used for the decryption.  Returns the decrypted data in a Buffer.
 
-```js
-validationHelper.convert('1234', 'int');
-```
-
-**Output**:
-```
-1234
-```
-
-## validationHelper.strToBool(str) ⇒ boolean
-Converts the string value to a boolean. `true`, `yes`, `1` return a value `true`. All other value return `false`.
+## AESCryptHelper.decryptiv(encryptedData [, secret] [, iv]) ⇒ Buffer
+Decrypts the `encryptedData` Buffer with the configured `secret` or the optionally passed `secret` and the configured `iv` or the optionally passed `iv`. Returns the decrypted data in a Buffer.
 
 # [License](#license)
 <a name="license"></a>
