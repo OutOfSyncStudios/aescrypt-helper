@@ -1,7 +1,7 @@
 {
   "name": "@mediaxpost/aescrypt-helper",
-  "version": "0.0.1",
-  "description": "A set of simple data validation and conversion tools",
+  "version": "1.0.0",
+  "description": "Simple tools to deal with the AES-256 encryption and decryption of data with arbitrary lengths",
   "main": "index.js",
   "scripts": {
     "test": "nyc mocha",
