@@ -6,12 +6,12 @@
 [![Travis build status](https://travis-ci.org/MediaXPost/aescrypt-helper.svg)](https://www.npmjs.org/package/@mediaxpost/aescrypt-helper)
 [![Total npm module downloads](http://img.shields.io/npm/dt/@mediaxpost/aescrypt-helper.svg)](https://www.npmjs.org/package/@mediaxpost/aescrypt-helper)
 [![Package Quality](http://npm.packagequality.com/badge/@mediaxpost/aescrypt-helper.png)](http://packagequality.com/#?package=@mediaxpost/aescrypt-helper)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a6899212e1c746f09de8088a59ae6cfc)](https://www.codacy.com/app/chronosis/aescrypt-helper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MediaXPost/aescrypt-helper&amp;utm_campaign=Badge_Grade)
-[![Codacy Coverage Badge](https://api.codacy.com/project/badge/Coverage/a6899212e1c746f09de8088a59ae6cfc)](https://www.codacy.com/app/chronosis/aescrypt-helper?utm_source=github.com&utm_medium=referral&utm_content=MediaXPost/aescrypt-helper&utm_campaign=Badge_Coverage)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5ccdf1cb900a4aa3985ced8a3c623fe4)](https://www.codacy.com/app/chronosis/aescrypt-helper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MediaXPost/aescrypt-helper&amp;utm_campaign=Badge_Grade)
+[![Codacy Coverage  Badge](https://api.codacy.com/project/badge/Coverage/5ccdf1cb900a4aa3985ced8a3c623fe4)](https://www.codacy.com/app/chronosis/aescrypt-helper?utm_source=github.com&utm_medium=referral&utm_content=MediaXPost/aescrypt-helper&utm_campaign=Badge_Coverage)
 [![Dependencies badge](https://david-dm.org/MediaXPost/aescrypt-helper/status.svg)](https://david-dm.org/MediaXPost/aescrypt-helper?view=list)
 
 
-`aescrypt-helper` is a set of simple data validation and conversion tools for string input data that uses [Validator.js](https://www.npmjs.com/package/validator)
+`aescrypt-helper` is a set of simple tools to deal with the AES-256 encryption and decryption of data with arbitrary lengths.
 
 # [Installation](#installation)
 <a name="installation"></a>
