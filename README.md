@@ -40,21 +40,21 @@ console.log(aescryptHelper.decrypt(aescryptHelper.encrypt('Test Message')));
 # [API Reference](#api)
 <a name="api"></a>
 
-## AESCryptHelper constructor(secret, iv[, separator]) ⇒ instanceof AESCryptHelper
+## AESCryptHelper constructor(secret, iv[, separator]) &#x27fe; instanceof AESCryptHelper
 Create an instance of AESCryptHelper using the `secret`, and `iv` (initialization vector).  Optionally, a block `separator` can be provided to determine how blocks of data are separated. For many implementations this is a new-line character, this library defaults to '$$$$'. The `secret`, `iv`, and the `separator` can be a string or a Buffer.
 
 ***Note***: The `iv` should be no more than 16-bytes in length and the `secret` should be no more than 32-bytes in length. When including a separator, it is recommended that non-base-64 characters are used.
 
-## AESCryptHelper.encrypt(data [, secret]) ⇒ Buffer
+## AESCryptHelper.encrypt(data [, secret]) &#x27fe; Buffer
 Encrypt the `data` Buffer with the configured `secret` or the optionally passed `secret`. No `iv` is used for the encryption.  Returns the encrypted data in a Buffer.
 
-## AESCryptHelper.encryptiv(data [, secret] [, iv]) ⇒ Buffer
+## AESCryptHelper.encryptiv(data [, secret] [, iv]) &#x27fe; Buffer
 Encrypt the `data` Buffer with the configured `secret` or the optionally passed `secret` and the configured `iv` or the optionally passed `iv`. Returns the encrypted data in a Buffer.
 
-## AESCryptHelper.decrypt(encryptedData [, secret]) ⇒ Buffer
+## AESCryptHelper.decrypt(encryptedData [, secret]) &#x27fe; Buffer
 Decrypts the `encryptedData` Buffer with the configured `secret` or the optionally passed `secret`. No `iv` is used for the decryption.  Returns the decrypted data in a Buffer.
 
-## AESCryptHelper.decryptiv(encryptedData [, secret] [, iv]) ⇒ Buffer
+## AESCryptHelper.decryptiv(encryptedData [, secret] [, iv]) &#x27fe; Buffer
 Decrypts the `encryptedData` Buffer with the configured `secret` or the optionally passed `secret` and the configured `iv` or the optionally passed `iv`. Returns the decrypted data in a Buffer.
 
 # [License](#license)
