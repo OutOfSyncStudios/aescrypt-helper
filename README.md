@@ -60,4 +60,4 @@ Decrypts the `encryptedData` Buffer with the configured `secret` or the optional
 # [License](#license)
 <a name="license"></a>
 
-Copyright (c) 2018 Jay Reardon -- Licensed under the MIT license.
+Copyright (c) 2018,2019 Jay Reardon -- Licensed under the MIT license.
