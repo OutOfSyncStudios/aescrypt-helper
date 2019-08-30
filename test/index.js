@@ -89,6 +89,18 @@ describe('AESCrypt Helper', () => {
     expect(testStrDec).to.equal(secretHash.toString());
   });
 
+  it('encryptIV random string w/ blockSeparator', () => {
+    aescyptHelper.blockSeparator = '$$$$';
+    testStrEnc = aescyptHelper.encryptiv(secretHash);
+    expect(testStrEnc).to.not.equal(secretHash.toString());
+  });
+
+  it('decryptIV random string w/ blockSeparator', () => {
+    testStrDec = aescyptHelper.decryptiv(testStrEnc).toString();
+    expect(testStrDec).to.not.equal(testStrEnc);
+    expect(testStrDec).to.equal(secretHash.toString());
+  });
+
   it('test encrypt/decrypt IV of random string', () => {
     expect(aescyptHelper.testiv(secretHash)).to.equal(true);
   });
