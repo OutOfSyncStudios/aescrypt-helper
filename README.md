@@ -6,7 +6,7 @@
 [![Travis build status](https://travis-ci.org/OutOfSyncStudios/aescrypt-helper.svg)](https://www.npmjs.org/package/@outofsync/aescrypt-helper)
 [![Total npm module downloads](http://img.shields.io/npm/dt/@outofsync/aescrypt-helper.svg)](https://www.npmjs.org/package/@outofsync/aescrypt-helper)
 [![Package Quality](http://npm.packagequality.com/badge/@outofsync/aescrypt-helper.png)](http://packagequality.com/#?package=@outofsync/aescrypt-helper)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5ccdf1cb900a4aa3985ced8a3c623fe4)](https://www.codacy.com/app/OutOfSyncStudios/aescrypt-helper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OutOfSyncStudios/aescrypt-helper&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9c713c46036f4500a61d77dd3aa8ea5d)](https://www.codacy.com/app/OutOfSyncStudios/aescrypt-helper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OutOfSyncStudios/aescrypt-helper&amp;utm_campaign=Badge_Grade)
 [![Codacy Coverage  Badge](https://api.codacy.com/project/badge/Coverage/5ccdf1cb900a4aa3985ced8a3c623fe4)](https://www.codacy.com/app/OutOfSyncStudios/aescrypt-helper?utm_source=github.com&utm_medium=referral&utm_content=OutOfSyncStudios/aescrypt-helper&utm_campaign=Badge_Coverage)
 [![Dependencies badge](https://david-dm.org/OutOfSyncStudios/aescrypt-helper/status.svg)](https://david-dm.org/OutOfSyncStudios/aescrypt-helper?view=list)
 
