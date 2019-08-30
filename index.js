@@ -1,7 +1,7 @@
 // aescrypt.js
 
 // Dependencies
-const __ = require('@mediaxpost/lodashext');
+const __ = require('@outofsync/lodash-ex');
 const crypto = require('crypto');
 const bsplit = require('buffer-split');
 
@@ -11,7 +11,7 @@ class AESCrypt {
     this.algo = 'aes-256-cbc';
     this.secret = Buffer.from(secret);
     this.iv = Buffer.from(iv);
-    this.blockSeparator = separator || '$$$$';
+    this.blockSeparator = separator;
   }
 
   test(data) {
@@ -24,11 +24,11 @@ class AESCrypt {
     return data.toString() === this.decryptiv(this.encryptiv(dataBuffer)).toString();
   }
 
-  getChunks(data) {
+  getChunks(data, len) {
     const dataBuffer = data instanceof Buffer ? data : Buffer.from(data);
     const chunks = [];
-    for (let itr = 0, jtr = dataBuffer.length; itr < jtr; itr += 15) {
-      chunks.push(dataBuffer.slice(itr, itr + 15));
+    for (let itr = 0, jtr = dataBuffer.length; itr < jtr; itr += len) {
+      chunks.push(dataBuffer.slice(itr, itr + len));
     }
     return chunks;
   }
@@ -64,19 +64,28 @@ class AESCrypt {
 
   encData(dataBuffer, secret, iv) {
     const out = [];
-    const chunks = this.getChunks(dataBuffer);
+    const chunks = this.getChunks(dataBuffer, 15);
     for (let itr = 0, jtr = chunks.length; itr < jtr; itr++) {
       out.push(this.enc(chunks[itr], secret, iv));
-      out.push(Buffer.from(this.blockSeparator));
+      if (this.blockSeparator) {
+        out.push(Buffer.from(this.blockSeparator));
+      }
     }
-    out.pop();
+    if (this.blockSeparator) {
+      out.pop();
+    }
 
     return Buffer.concat(out);
   }
 
   decData(dataBuffer, secret, iv) {
     const out = [];
-    const chunks = bsplit(dataBuffer, Buffer.from(this.blockSeparator));
+    let chunks;
+    if (this.blockSeparator) {
+      chunks = bsplit(dataBuffer, Buffer.from(this.blockSeparator));
+    } else {
+      chunks = this.getChunks(dataBuffer, 16);      
+    }
     for (let itr = 0, jtr = chunks.length; itr < jtr; itr++) {
       out.push(this.dec(chunks[itr], secret, iv));
     }
