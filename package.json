@@ -1,6 +1,6 @@
 {
   "name": "@outofsync/aescrypt-helper",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Simple tools to deal with the AES-256-CBC encryption and decryption of data with arbitrary lengths",
   "main": "index.js",
   "scripts": {
