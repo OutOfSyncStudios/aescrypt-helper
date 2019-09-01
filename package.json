@@ -15,6 +15,9 @@
     "type": "git",
     "url": "git+https://github.com/OutOfSyncStudios/aescrypt-helper.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "aes",
     "crypt",
