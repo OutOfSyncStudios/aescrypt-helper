@@ -14,7 +14,7 @@ const crypto = require('crypto');
  */
 class AESCrypt {
   constructor(secret, iv) {
-    iv = iv || Buffer.from([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0], 0, 16);
+    iv = iv || Buffer.from([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], 0, 16);
     this.algo = 'aes-256-cbc';
     this.secret = Buffer.from(secret);
     this.iv = Buffer.from(iv);
