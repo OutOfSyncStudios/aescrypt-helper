@@ -91,7 +91,7 @@ class AESCrypt {
    * @param {Buffer} dataBuffer
    * @param {Buffer|string} secret
    * @param {Buffer|string} iv
-   * @return {Buffer} 
+   * @return {Buffer}
    * @memberof AESCrypt
    */
   enc(dataBuffer, secret, iv) {

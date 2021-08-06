@@ -3,10 +3,10 @@
 [![NPM](https://nodei.co/npm/@outofsync/aescrypt-helper.png?downloads=true)](https://nodei.co/npm/@outofsync/aescrypt-helper/)
 
 [![Actual version published on npm](http://img.shields.io/npm/v/@outofsync/aescrypt-helper.svg)](https://www.npmjs.org/package/@outofsync/aescrypt-helper)
-[![Master build](https://github.com/OutOfSyncStudios/aescrypt-helper/actions/workflows/build-master.yml/badge.svg)](https://github.com/OutOfSyncStudios/aescrypt-helper/actions/workflows/build-master.yml)
 [![Total npm module downloads](http://img.shields.io/npm/dt/@outofsync/aescrypt-helper.svg)](https://www.npmjs.org/package/@outofsync/aescrypt-helper)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9c713c46036f4500a61d77dd3aa8ea5d)](https://www.codacy.com/app/OutOfSyncStudios/aescrypt-helper?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OutOfSyncStudios/aescrypt-helper&amp;utm_campaign=Badge_Grade)
-[![Codacy Coverage Badge](https://api.codacy.com/project/badge/Coverage/9c713c46036f4500a61d77dd3aa8ea5d)](https://www.codacy.com/app/OutOfSyncStudios/aescrypt-helper?utm_source=github.com&utm_medium=referral&utm_content=OutOfSyncStudios/aescrypt-helper&utm_campaign=Badge_Coverage)
+[![Master build](https://github.com/OutOfSyncStudios/aescrypt-helper/actions/workflows/build-master.yml/badge.svg)](https://github.com/OutOfSyncStudios/aescrypt-helper/actions/workflows/build-master.yml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/eebdf6aed1a14a3e9a44a017e4ac8ac2)](https://www.codacy.com/gh/OutOfSyncStudios/aescrypt-helper/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OutOfSyncStudios/aescrypt-helper&amp;utm_campaign=Badge_Grade)
+[![Codacy Coverage Badge](https://app.codacy.com/project/badge/Coverage/eebdf6aed1a14a3e9a44a017e4ac8ac2)](https://www.codacy.com/gh/OutOfSyncStudios/aescrypt-helper/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=OutOfSyncStudios/aescrypt-helper&amp;utm_campaign=Badge_Coverage)
 [![Dependencies badge](https://david-dm.org/gh/OutOfSyncStudios/aescrypt-helper.svg)](https://david-dm.org/OutOfSyncStudios/aescrypt-helper?view=list)
 
 
