@@ -1,8 +1,9 @@
 {
   "name": "@outofsync/aescrypt-helper",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "Simple tools to deal with the AES-256-CBC encryption and decryption of data with arbitrary lengths",
   "main": "index.js",
+  "types": "index.d.js",
   "scripts": {
     "test": "nyc mocha",
     "build": "gulp",
@@ -31,17 +32,19 @@
     "url": "https://github.com/OutOfSyncStudios/aescrypt-helper/issues"
   },
   "homepage": "https://github.com/OutOfSyncStudios/aescrypt-helper#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@types/node": "^14.17.9"
+  },
   "devDependencies": {
     "chai": "^4.3.4",
     "codacy-coverage": "^3.4.0",
-    "eslint": "^7.23.0",
+    "eslint": "^7.32.0",
     "gulp": "^4.0.2",
     "gulp-eslint": "^6.0.0",
     "gulp-mocha": "^8.0.0",
-    "gulp-prettier": "^3.0.0",
-    "mocha": "^8.3.2",
+    "gulp-prettier": "^4.0.0",
+    "mocha": "^9.0.3",
     "nyc": "^15.1.0",
-    "prettier": "^2.2.1"
+    "prettier": "^2.3.2"
   }
 }
