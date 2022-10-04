@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/OutOfSyncStudios/aescrypt-helper#readme",
   "dependencies": {
-    "@types/node": "^14.17.9"
+    "@types/node": "^18.8.1"
   },
   "devDependencies": {
     "chai": "^4.3.4",
